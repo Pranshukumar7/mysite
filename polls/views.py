@@ -1,13 +1,13 @@
 from django.http import HttpResponse
 from .models import Question
-
+from django.shortcuts import render
 def owner(request):
     return HttpResponse("Hello, world. e6d13316 is the polls index.")
 
 def index(request):
-    qu = Question.objects.order_by('-pub_date')
-    output = ",".join([q.question_text for q in qu])
-    return HttpResponse(output)
+    output = Question.objects.order_by('-pub_date')
+    context = {'latest_question_list': output}
+    return render(request, 'index.html',context)
 
 # result
 def result(request,question_id):
