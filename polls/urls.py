@@ -13,6 +13,8 @@ urlpatterns = [
     path("<int:question_id>/result/",views.result,name = 'result'),
     # /polls/5/vote/
     path("<int:question_id>/vote/",views.vote,name = 'vote'),
+    
+    path('rev',views.reve)
 
 
 ]

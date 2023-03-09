@@ -34,3 +34,7 @@ def vote(request,question_id):
         selected_choice.votes+=1
         selected_choice.save()
     return HttpResponseRedirect(reverse('polls:result',args = (question_id,)))
+def reve(request):
+    # resp = reverse('home:home')+' '
+    resp= reverse("polls:result",args = (1,))
+    return HttpResponse(resp)
