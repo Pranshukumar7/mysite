@@ -7,8 +7,8 @@ def myview(request):
     oldval = request.COOKIES.get('pp', None)
     resp = render(request, 'hello/main.html',{'num_visit':num_visit})
     if oldval:
-        resp.set_cookie('pp', int(oldval)+1)
+        resp.set_cookie('dj4e_cookie', 'd2108470', max_age=1000)
     else:
-        resp.set_cookie('pp',69,max_age = 6969)
+        resp.set_cookie('dj4e_cookie', 'd2108470', max_age=1000)
     return resp
     return render(request, 'hello/main.html')
