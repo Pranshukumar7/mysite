@@ -4,8 +4,9 @@ from django.urls import reverse
 from django.shortcuts import get_object_or_404
 
 from django.shortcuts import render
+# id for pranshu
 def owner(request):
-    return HttpResponse("Hello, world. e6d13316 is the polls index.")
+    return HttpResponse("Hello, world. d2108470 is the polls index.")
 
 def index(request):
     output = Question.objects.order_by('-pub_date')
