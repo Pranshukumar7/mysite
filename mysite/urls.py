@@ -18,5 +18,6 @@ urlpatterns = [
     path("hello/",include('hello.urls',namespace = 'hello')),
     path("autos/",include('autos.urls',namespace = 'autos')),
     path('accounts/', include('django.contrib.auth.urls')), 
+    # path('cats/',include('cats.urls',namespace = 'cat')),
 
 ]
