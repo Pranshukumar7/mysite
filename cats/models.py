@@ -14,7 +14,7 @@ class Cat(models.Model):
     nickname = models.CharField(max_length =200,
                 validators = [MinLengthValidator(2,"Breed must be greather than 1 character")] )
     weight = models.FloatField()
-    # foods = models.CharField(max_length=300)
+    foods = models.CharField(max_length=300,default= "fish")
     breed = models.ForeignKey(Breed,on_delete=models.CASCADE,null=False)
 
     def __str__(self):
