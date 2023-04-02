@@ -15,11 +15,11 @@ class AdsDetailView(OwnerDetailView):
 class AdsCreateView(OwnerCreateView):
     model = Ad
     # List the fields to copy from the Ads model to the Ads form
-    fields = ['title', 'text']
+    fields = ['title', 'text','price']
 
 class AdsUpdateView(OwnerUpdateView):
     model = Ad
-    fields = ['title', 'text']
+    fields = ['title', 'text','price']
     # This would make more sense
     # fields_exclude = ['owner', 'created_at', 'updated_at']
 
